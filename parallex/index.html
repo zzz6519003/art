@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <div class="imgBx">
+                <img src="./img.png" alt="" style="width: 450px;height: 300px;">
+            </div>
+            <div class="contentBx">
+                <h2>Tilt Box Hover Effects</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos voluptatibus blanditiis voluptate! Recusandae quos qui ab quaerat deleniti est eligendi porro optio, voluptas impedit autem officiis, magni accusamus eaque totam.</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="imgBx">
+                <img src="./img.png" alt="" style="width: 450px;height: 300px;">
+            </div>
+            <div class="contentBx">
+                <h2>Tilt Box Hover Effects</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos voluptatibus blanditiis voluptate! Recusandae quos qui ab quaerat deleniti est eligendi porro optio, voluptas impedit autem officiis, magni accusamus eaque totam.</p>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="vanilla-tilt.js"></script>
+<script type="text/javascript">
+	VanillaTilt.init(document.querySelector(".box"), {
+		max: 25,
+		speed: 400
+	});</script>
+</html>
