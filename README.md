@@ -1,0 +1,3 @@
+
+menuHover:
+    overflow: hidden;

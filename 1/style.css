@@ -54,7 +54,7 @@
     background-size: 200%, 200%;
     color: transparent;
     background-clip: text;
-    /* -webkit-background-clip: text; */
+    -webkit-background-clip: text;
     animation: move 4s linear infinite;
   }
 

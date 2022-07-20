@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+<body>
+    <div class="search-box">
+        <input type="text" placeholder="Type to search..">
+        <div class="search-btn">
+            <i class="fas fa-search"></i>
+        </div>
+        <div class="cancel-btn">
+            <i class="fas fa-times"></i>
+        </div>
+        <div class="search-data"></div>
+    </div>
+    <script>
+      const searchBox = document.querySelector(".search-box");
+      const searchBtn = document.querySelector(".search-btn");
+      const cancelBtn = document.querySelector(".cancel-btn");
+
+      const searchInput = document.querySelector("input");
+      const searchData = document.querySelector(".search-data");
+      searchBtn.onclick = () => {
+        const value = searchInput.value;
+
+        searchBox.classList.add("active");
+        searchBtn.classList.add("active");
+        searchInput.classList.add("active");
+        cancelBtn.classList.add("active");
+        // searchInput.focus();
+        if (searchInput.value != "") {
+            searchData.classList.remove("active");
+            searchData.innerHTML = "You just typed " + "<span>" + value + "</span>";
+        } else {
+            searchData.innerHTML = "";
+        }
+      }
+      cancelBtn.onclick = () => {
+        console.log(searchBox.classList);
+        searchBox.classList.remove("active");
+        // console.log(searchBox.classList);
+
+        searchBtn.classList.remove("active");
+        searchInput.classList.remove("active");
+        cancelBtn.classList.remove("active");
+
+        searchData.classList.remove("active");
+        searchInput.value = "";
+      }
+    </script>
+</body>
+</html>
